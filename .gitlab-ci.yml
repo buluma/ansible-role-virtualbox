@@ -92,6 +92,12 @@ role_testing:
       - image: "docker-ubuntu-systemd"
         tag: "focal"
 
+job_name:
+  stage: .pre
+  script:
+    - export
+    # - 'dir env:'  # Use this for PowerShell
+
 release_job:
   stage: .post
   needs: [molecule]
