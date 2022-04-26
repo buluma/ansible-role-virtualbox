@@ -53,7 +53,7 @@ testing:
         tag: "focal"
 
 galaxy:
-  stage: deploy
+  stage: test
   needs: []
   script:
     - ansible-galaxy role info buluma.virtualbox
@@ -99,7 +99,7 @@ role_testing:
 ## - 'dir env:'  # Use this for PowerShell
 
 release_job:
-  stage: deploy
+  stage: .post
   needs: [molecule]
   image: registry.gitlab.com/gitlab-org/release-cli:latest
   rules:
