@@ -64,10 +64,10 @@ galaxy:
     - ansible-galaxy role info buluma.virtualbox
 
 galaxy_import:
-  stage: .post
+  stage: deploy
   needs: [molecule]
   script:
-    - ansible-galaxy role import --api-key ${GALAXY_API_KEY} buluma ansible-role-virtualbox --status buluma/ansible-role-virtualbox
+    - ansible-galaxy role import --api-key ${GALAXY_API_KEY} ${CI_PROJECT_PATH}
   rules:
     - if: $CI_COMMIT_TAG
 
@@ -92,14 +92,14 @@ role_testing:
       - image: "docker-ubuntu-systemd"
         tag: "focal"
 
-job_name:
-  stage: .pre
-  script:
-    - export
-    # - 'dir env:'  # Use this for PowerShell
+# job_name:
+# stage: .pre
+# script:
+#  - export
+## - 'dir env:'  # Use this for PowerShell
 
 release_job:
-  stage: .post
+  stage: deploy
   needs: [molecule]
   image: registry.gitlab.com/gitlab-org/release-cli:latest
   rules:
