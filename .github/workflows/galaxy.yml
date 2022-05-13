@@ -11,6 +11,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-20.04
+    # TODO: Add to tracker
     steps:
       - name: galaxy
         uses: buluma/galaxy-action@v1.0.3
