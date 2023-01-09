@@ -21,7 +21,7 @@ molecule:
       - image: "docker-ubuntu-systemd"
         tag: "bionic"
       - image: "docker-ubuntu-systemd"
-        tag: "focal"  tag: "focal"
+        tag: "focal"
 
 galaxy:
   stage: deploy
