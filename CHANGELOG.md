@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.10](https://github.com/buluma/ansible-role-virtualbox/tree/0.1.10) (2023-01-09)
+
+[Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/0.1.9...0.1.10)
+
 ## [0.1.9](https://github.com/buluma/ansible-role-virtualbox/tree/0.1.9) (2022-04-26)
 
 [Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/0.1.8...0.1.9)
