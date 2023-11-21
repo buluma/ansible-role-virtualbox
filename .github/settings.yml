@@ -5,4 +5,4 @@
 repository:
   description: Install and configure virtualbox on your system.
   homepage: https://buluma.github.io/
-  topics: virtualbox, ansible, molecule, tox, playbook, hacktoberfest
+  topics: virtualbox, ansible, molecule, tox, playbook
