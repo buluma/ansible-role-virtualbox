@@ -4,24 +4,24 @@ galaxy_info:
   role_name: virtualbox
   description: Install and configure virtualbox on your system.
   license: Apache-2.0
-  company: none
+  company: ShadowNet
   min_ansible_version: "2.12"
 
   platforms:
     - name: EL
       versions:
         - "8"
+        - "9"
     - name: Debian
       versions:
         - bullseye
-    - name: Fedora
-      versions:
-        - "34"
     - name: Ubuntu
       versions:
-        - all
+        - bionic
+        - focal
 
   galaxy_tags:
     - virtualbox
+    - system
 
 dependencies: []
