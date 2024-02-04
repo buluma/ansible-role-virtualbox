@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-virtualbox/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/0.1.10...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#9](https://github.com/buluma/ansible-role-virtualbox/issues/9)
+
 ## [0.1.10](https://github.com/buluma/ansible-role-virtualbox/tree/0.1.10) (2023-01-09)
 
 [Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/0.1.9...0.1.10)
