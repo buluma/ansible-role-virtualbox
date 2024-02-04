@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-virtualbox/tree/HEAD)
+## [0.2.0](https://github.com/buluma/ansible-role-virtualbox/tree/0.2.0) (2024-01-20)
 
-[Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/0.1.10...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/0.1.10...0.2.0)
 
 **Closed issues:**
 
