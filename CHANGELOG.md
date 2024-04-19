@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-virtualbox/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/24.3.31...HEAD)
+
+**Merged pull requests:**
+
+- Add keyring to key import [\#11](https://github.com/buluma/ansible-role-virtualbox/pull/11) ([compscidr](https://github.com/compscidr))
+
 ## [24.3.31](https://github.com/buluma/ansible-role-virtualbox/tree/24.3.31) (2024-03-26)
 
 [Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/0.2.0...24.3.31)
