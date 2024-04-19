@@ -42,6 +42,7 @@
       ansible.builtin.apt_key:
         url: "{{ item }}"
         state: present
+        keyring: "/etc/apt/trusted.gpg.d/virtualbox.gpg"
       loop: "{{ virtualbox_keys }}"
       loop_control:
         label: "{{ item | basename }}"
