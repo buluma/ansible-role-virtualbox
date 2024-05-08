@@ -4,6 +4,12 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/24.3.31...HEAD)
 
+**Closed issues:**
+
+- Update action [\#8](https://github.com/buluma/ansible-role-virtualbox/issues/8)
+- rebuild action [\#7](https://github.com/buluma/ansible-role-virtualbox/issues/7)
+- Add to tracker [\#1](https://github.com/buluma/ansible-role-virtualbox/issues/1)
+
 **Merged pull requests:**
 
 - Add keyring to key import [\#11](https://github.com/buluma/ansible-role-virtualbox/pull/11) ([compscidr](https://github.com/compscidr))
