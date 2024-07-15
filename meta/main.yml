@@ -17,8 +17,10 @@ galaxy_info:
         - bullseye
     - name: Ubuntu
       versions:
-        - bionic
+        - jammy
         - focal
+        - lunar
+        - noble
 
   galaxy_tags:
     - virtualbox
