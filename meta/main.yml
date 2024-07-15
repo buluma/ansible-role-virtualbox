@@ -19,8 +19,6 @@ galaxy_info:
       versions:
         - jammy
         - focal
-        - lunar
-        - noble
 
   galaxy_tags:
     - virtualbox
