@@ -9,7 +9,6 @@ _virtualbox_requirements:
   default:
     - kernel-devel
   Debian: []
-
 virtualbox_requirements: "{{ _virtualbox_requirements[ansible_os_family] | default(_virtualbox_requirements['default']) }}"
 
 _virtualbox_repo_mapping:
