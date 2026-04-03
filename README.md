@@ -45,7 +45,7 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 ---
 # defaults file for virtualbox
 
-virtualbox_version: "6.1"
+virtualbox_version: "7.2"
 ```
 
 ## [Requirements](#requirements)
@@ -94,3 +94,4 @@ If you find issues, please register them on [GitHub](https://github.com/buluma/a
 ## [Author Information](#author-information)
 
 [buluma](https://buluma.github.io/)
+
