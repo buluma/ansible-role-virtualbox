@@ -12,6 +12,7 @@
 
 **Merged pull requests:**
 
+- Bump release-drafter/release-drafter from 6 to 7 [\#15](https://github.com/buluma/ansible-role-virtualbox/pull/15) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Add keyring to key import [\#11](https://github.com/buluma/ansible-role-virtualbox/pull/11) ([compscidr](https://github.com/compscidr))
 
 ## [24.3.31](https://github.com/buluma/ansible-role-virtualbox/tree/24.3.31) (2024-03-26)
