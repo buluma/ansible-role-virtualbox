@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-virtualbox/tree/HEAD)
+## [26.6.0](https://github.com/buluma/ansible-role-virtualbox/tree/26.6.0) (2026-03-17)
 
-[Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/24.3.31...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-virtualbox/compare/24.3.31...26.6.0)
 
 **Closed issues:**
 
