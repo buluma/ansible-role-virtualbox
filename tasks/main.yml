@@ -39,10 +39,10 @@
     - ansible_pkg_mgr in [ "apt" ]
   block:
     - name: Import apt key
-      ansible.builtin.apt_key:
+      ansible.builtin.get_url:
         url: "{{ item }}"
-        state: present
-        keyring: "/etc/apt/trusted.gpg.d/virtualbox.gpg"
+        dest: "/etc/apt/trusted.gpg.d/virtualbox-{{ item | basename }}"
+        mode: "0644"
       loop: "{{ virtualbox_keys }}"
       loop_control:
         label: "{{ item | basename }}"
