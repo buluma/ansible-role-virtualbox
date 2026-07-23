@@ -38,11 +38,29 @@
   when:
     - ansible_pkg_mgr in [ "apt" ]
   block:
-    - name: Import apt key
-      ansible.builtin.apt_key:
-        url: "{{ item }}"
+    - name: Ensure gnupg is installed for key management.
+      ansible.builtin.package:
+        name: gnupg
         state: present
-        keyring: "/etc/apt/trusted.gpg.d/virtualbox.gpg"
+
+    - name: Download apt keys.
+      ansible.builtin.get_url:
+        url: "{{ item }}"
+        dest: "/tmp/{{ item | basename }}"
+        mode: "0644"
+      loop: "{{ virtualbox_keys }}"
+      loop_control:
+        label: "{{ item | basename }}"
+
+    # apt-key is gone from Debian 13/Ubuntu 26.04+, so dearmor each key
+    # straight into trusted.gpg.d instead of shelling out to it.
+    - name: Import apt key
+      ansible.builtin.command:
+        cmd: >-
+          gpg --dearmor
+          -o /etc/apt/trusted.gpg.d/virtualbox-{{ item | basename | regex_replace('\.asc$', '') }}.gpg
+          /tmp/{{ item | basename }}
+        creates: "/etc/apt/trusted.gpg.d/virtualbox-{{ item | basename | regex_replace('\\.asc$', '') }}.gpg"
       loop: "{{ virtualbox_keys }}"
       loop_control:
         label: "{{ item | basename }}"

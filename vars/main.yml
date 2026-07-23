@@ -1,9 +1,11 @@
 ---
 # vars file for virtualbox
 
+# The pre-2016 oracle_vbox.asc key fails import under RHEL9/10's stricter
+# gpg policy ("No binding signature") - the 2016 key alone has covered every
+# supported release since VirtualBox 6.1.44/7.0.8.
 virtualbox_keys:
   - https://www.virtualbox.org/download/oracle_vbox_2016.asc
-  - https://www.virtualbox.org/download/oracle_vbox.asc
 
 _virtualbox_requirements:
   default:
