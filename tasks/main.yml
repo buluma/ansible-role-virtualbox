@@ -15,7 +15,7 @@
   loop_control:
     label: "{{ item | basename }}"
   when:
-    - ansible_pkg_mgr in [ "yum", "dnf", "dnf5", "zypper" ]
+    - ansible_facts['pkg_mgr'] in [ "yum", "dnf", "dnf5", "zypper" ]
 
 - name: Place yum repository
   ansible.builtin.yum_repository:
@@ -24,7 +24,7 @@
     baseurl: "{{ virtualbox_yum_baseurl }}"
     gpgcheck: true
   when:
-    - ansible_pkg_mgr in [ "yum", "dnf", "dnf5" ]
+    - ansible_facts['pkg_mgr'] in [ "yum", "dnf", "dnf5" ]
 
 - name: Place zypper repository
   community.general.zypper_repository:
@@ -32,11 +32,11 @@
     repo: "{{ virtualbox_yum_baseurl }}"
     state: present
   when:
-    - ansible_pkg_mgr in [ "zypper" ]
+    - ansible_facts['pkg_mgr'] in [ "zypper" ]
 
 - name: Configure apt repository
   when:
-    - ansible_pkg_mgr in [ "apt" ]
+    - ansible_facts['pkg_mgr'] in [ "apt" ]
   block:
     - name: Ensure python3-debian is installed for deb822_repository.
       ansible.builtin.package:
@@ -65,7 +65,7 @@
         name: virtualbox
         types: deb
         uris: "{{ virtualbox_apt_repository }}"
-        suites: "{{ ansible_distribution_release | lower }}"
+        suites: "{{ ansible_facts['distribution_release'] | lower }}"
         components: contrib
         architectures: amd64
         signed_by: "{{ virtualbox_keys | first }}"
