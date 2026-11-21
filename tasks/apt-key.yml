@@ -115,6 +115,18 @@
         group: root
         mode: "0644"
   always:
+    - name: apt-key | Stop the gpg-agent started by the key import
+      ansible.builtin.command:
+        argv:
+          - gpgconf
+          - --homedir
+          - "{{ _virtualbox_apt_key_dir.path }}"
+          - --kill
+          - gpg-agent
+      changed_when: false
+      failed_when: false
+      when: _virtualbox_apt_key_dir.path is defined
+
     - name: apt-key | Remove temporary directory
       ansible.builtin.file:
         path: "{{ _virtualbox_apt_key_dir.path }}"

@@ -109,6 +109,18 @@
         key: "{{ _virtualbox_rpm_key_dir.path }}/verified.asc"
         fingerprint: "{{ virtualbox_key_fingerprint }}"
   always:
+    - name: rpm-key | Stop the gpg-agent started by the key import
+      ansible.builtin.command:
+        argv:
+          - gpgconf
+          - --homedir
+          - "{{ _virtualbox_rpm_key_dir.path }}"
+          - --kill
+          - gpg-agent
+      changed_when: false
+      failed_when: false
+      when: _virtualbox_rpm_key_dir.path is defined
+
     - name: rpm-key | Remove temporary directory
       ansible.builtin.file:
         path: "{{ _virtualbox_rpm_key_dir.path }}"
